@@ -215,7 +215,7 @@
                                                miscContainerView:self.miscContainerView
                                                         animator:self.animator
                                                    swipeableView:self
-                                               cancelSwipeAction:self.cancelSwipeAction]];
+                                               cancelSwipeAction:self.cancelSwipeAction];
     [self setManagerForView:view viewManager:viewManager];
 }
 
