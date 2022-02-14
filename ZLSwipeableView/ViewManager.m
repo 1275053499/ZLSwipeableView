@@ -37,7 +37,8 @@ static const CGFloat kAnchorViewWidth = 1000;
                        index:(NSUInteger)index
            miscContainerView:(UIView *)miscContainerView
                     animator:(UIDynamicAnimator *)animator
-               swipeableView:(ZLSwipeableView *)swipeableView {
+               swipeableView:(ZLSwipeableView *)swipeableView
+           cancelSwipeAction:(BOOL)cancelSwipeAction{
     self = [super init];
     if (self) {
         self.view = view;
@@ -45,9 +46,10 @@ static const CGFloat kAnchorViewWidth = 1000;
         self.miscContainerView = miscContainerView;
         self.animator = animator;
         self.swipeableView = swipeableView;
-
-        [view addGestureRecognizer:
-                  [[PanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)]];
+      if (!cancelSwipeAction) {
+            [view addGestureRecognizer:
+                      [[PanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)]];
+        }
         _anchorView =
             [[UIView alloc] initWithFrame:CGRectMake(0, 0, kAnchorViewWidth, kAnchorViewWidth)];
         _anchorView.hidden = NO;
