@@ -29,7 +29,8 @@ typedef NS_ENUM(NSUInteger, ViewManagerState) {
                        index:(NSUInteger)index
            miscContainerView:(UIView *)miscContainerView
                     animator:(UIDynamicAnimator *)animator
-               swipeableView:(ZLSwipeableView *)swipeableView;
+               swipeableView:(ZLSwipeableView *)swipeableView
+                cancelSwipeAction:(BOOL)cancelSwipeAction;
 
 - (void)setStateSnapping:(CGPoint)point;
 
