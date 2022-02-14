@@ -111,7 +111,8 @@ typedef NS_ENUM(NSUInteger, ZLSwipeableViewDirection) {
 @property (nonatomic) CGFloat minTranslationInPercent;
 @property (nonatomic) CGFloat minVelocityInPointPerSecond;
 @property (nonatomic) ZLSwipeableViewDirection allowedDirection;
-
+/// 取消手势移动
+@property (nonatomic) BOOL cancelSwipeAction;
 - (UIView *)topView;
 
 - (NSArray<UIView *> *)activeViews;
