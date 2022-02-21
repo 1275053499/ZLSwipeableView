@@ -44,46 +44,36 @@ atOffsetFromCenter:(CGPoint)offset
               views:(NSArray<UIView *> *)views
       swipeableView:(ZLSwipeableView *)swipeableView {
       
-      switch (index) {
-        case 0:
-            {
+    view.transform = CGAffineTransformMakeScale(0.95, 0.95);
+        switch (index) {
+        case 0:{
                 [UIView animateWithDuration:0.5 animations:^{
                     view.transform = CGAffineTransformMakeScale(1, 1);
-                                } completion:^(BOOL finished) {
-                                    
-                                }];
-               
+                } completion:^(BOOL finished) {}];
             }
             break;
-        case 1:
-            {
+        case 1:{
                 [UIView animateWithDuration:0.5 animations:^{
-                    view.transform = CGAffineTransformMakeScale(0.95, 0.95);
-                                } completion:^(BOOL finished) {
-                                    
-                                }];
-              
-            }
+                    view.transform = CGAffineTransformMakeScale(1, 1);
+                } completion:^(BOOL finished) {}];
+              }
             break;
-            case 2:{
+        case 2:{
                 [UIView animateWithDuration:0.5 animations:^{
-                    view.transform = CGAffineTransformMakeScale(0.90, 0.90);
-                                } completion:^(BOOL finished) {
-                                    
-                                }];
+                    view.transform = CGAffineTransformMakeScale(0.94, 0.94);
+                } completion:^(BOOL finished) {}];
             }
-               
             break;
             case 3:{
-                [UIView animateWithDuration:0.6 animations:^{
-                    view.transform = CGAffineTransformMakeScale(0.85, 0.85);
-                                } completion:^(BOOL finished) {
-                                    
-                                }];
+                [UIView animateWithDuration:0.5 animations:^{
+                    view.transform = CGAffineTransformMakeScale(0.90, 0.90);
+                } completion:^(BOOL finished) {}];
             }
             break;
             default:{
-                
+                [UIView animateWithDuration:0.5 animations:^{
+                    view.transform = CGAffineTransformMakeScale(1, 1);
+                } completion:^(BOOL finished) {}];
             }
             break;
         }
